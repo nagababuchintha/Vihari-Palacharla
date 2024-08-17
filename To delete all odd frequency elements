@@ -1,0 +1,29 @@
+# Take a dictionary and initialize it to empty
+# using the {} or dict() say freqncyDictionary.
+freqncyDictionary = {}
+# Give the list as static input and store it in a variable.
+gvnlst = [10, 4, 2, 10, 1, 2, 3, 4, 5, 6, 6]
+# Loop in the given list using the For loop.
+for i in gvnlst:
+        # Inside the For loop,
+    # Check if the list element is present in the dictionary
+    # or not using the if conditional statement and 'in' keyword.
+    if i in freqncyDictionary.keys():
+                # If it is true then increment the count of the list element
+        # in the dictionary by 1.
+        freqncyDictionary[i] = freqncyDictionary[i]+1
+    # Else initialize the dictionary with the list element as key and value as 1.
+    else:
+        freqncyDictionary[i] = 1
+# Take a new empty list say modifdlst and store it in a variable.
+modifdlst = []
+# Loop in the given list using the For loop.
+for lstelmt in gvnlst:
+  # Check if the key in the freqncyDictionary having value even using the if conditional
+  # statement.
+    if(freqncyDictionary[lstelmt] % 2 == 0):
+      # If it is true then append the key value to the above declared empty list modifdlst.
+        modifdlst.append(lstelmt)
+# Print the list after deletion of all the elements from a given list that has an odd
+# frequency.
+print("The list after deletion of all the elements from a given list that has an odd frequency :", modifdlst)
